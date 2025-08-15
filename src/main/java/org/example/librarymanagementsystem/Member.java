@@ -5,7 +5,13 @@ import lombok.Getter;
 @Getter
 public class Member {
 
-    private Long memberId;
-    private String name;
-    private Grade grade;
+    private final Long memberId;
+    private final String name;
+    private final Grade grade;
+
+    public Member(Long memberId, String name, Grade grade) {
+        this.memberId = memberId;
+        this.name = name;
+        this.grade = grade;
+    }
 }

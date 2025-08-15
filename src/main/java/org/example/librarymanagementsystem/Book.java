@@ -5,8 +5,17 @@ import lombok.Getter;
 @Getter
 public class Book {
 
-    private Long isbn;
-    private String title;
-    private String author;
-    private String available;
+    private final Long isbn;
+    private final String title;
+    private final String author;
+    private final String available;
+    private final Category category;
+
+    public Book(Long isbn, String title, String author, String available, Category category) {
+        this.isbn = isbn;
+        this.title = title;
+        this.author = author;
+        this.available = available;
+        this.category = category;
+    }
 }
