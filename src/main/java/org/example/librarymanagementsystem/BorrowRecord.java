@@ -12,10 +12,18 @@ public class BorrowRecord {
     private final LocalDate borrowDate;
     private LocalDate dueDate;
 
-    public BorrowRecord(Book book, Member member) {
+    private BorrowRecord(Book book, Member member) {
         this.book = book;
         this.member = member;
         this.borrowDate = LocalDate.now();
         this.dueDate = null;
+    }
+    // 정적 팩토리 메서드
+    public static BorrowRecord getInstance(Book book, Member member) {
+        return new BorrowRecord(book, member);
+    }
+
+    public void returnRecord() {
+        this.dueDate = LocalDate.now();
     }
 }
