@@ -19,7 +19,7 @@ public class BorrowRecord {
         this.dueDate = null;
     }
     // 정적 팩토리 메서드
-    public static BorrowRecord getInstance(Book book, Member member) {
+    public static BorrowRecord newInstance(Book book, Member member) {
         return new BorrowRecord(book, member);
     }
 
